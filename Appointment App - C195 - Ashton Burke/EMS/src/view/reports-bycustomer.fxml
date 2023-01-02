@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="854.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsbyCustomer">
+   <children>
+      <RadioButton fx:id="ContactScheduleReports" layoutX="127.0" layoutY="54.0" mnemonicParsing="false" onAction="#onActionContactScheduleReports" selected="true" text="Contact Schedule">
+         <toggleGroup>
+            <ToggleGroup fx:id="reports" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="ApptsbyCountryReports" layoutX="404.0" layoutY="54.0" mnemonicParsing="false" onAction="#onActionApptsbyCountryReports" selected="true" text="Appointments by Customer" toggleGroup="$reports" />
+      <RadioButton fx:id="CustomersbyMonthReports" layoutX="676.0" layoutY="54.0" mnemonicParsing="false" onAction="#onActionCustomersbyMonthReports" text="Appointments by Month" toggleGroup="$reports" />
+      <RadioButton fx:id="CustomersbyTypeReports" layoutX="970.0" layoutY="54.0" mnemonicParsing="false" onAction="#onActionCustomersbyTypeReports" text="Appointments by Type" toggleGroup="$reports" />
+      <TableView fx:id="ReportsbyCustomerTableView" layoutX="81.0" layoutY="152.0" prefHeight="582.0" prefWidth="1106.0">
+        <columns>
+          <TableColumn fx:id="apptID" prefWidth="107.0" text="Appointment ID" />
+          <TableColumn fx:id="apptTitle" prefWidth="105.0" text="Title" />
+            <TableColumn fx:id="apptDescription" prefWidth="110.0" text="Description" />
+            <TableColumn fx:id="apptLocation" prefWidth="129.0" text="Location" />
+            <TableColumn fx:id="apptType" prefWidth="141.0" text="Type" />
+            <TableColumn fx:id="apptStart" prefWidth="108.0" text="Start" />
+            <TableColumn fx:id="apptEnd" prefWidth="115.0" text="End" />
+            <TableColumn fx:id="apptCustomerID" prefWidth="171.0" text="Customer ID" />
+            <TableColumn fx:id="apptContact" prefWidth="119.0" text="Contact ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="81.0" layoutY="112.0" text="Customer" />
+      <ComboBox fx:id="GetCountryReport" editable="true" layoutX="166.0" layoutY="108.0" onAction="#onActionGetCountryReport" prefHeight="25.0" prefWidth="225.0" />
+      <Button layoutX="407.0" layoutY="782.0" mnemonicParsing="false" onAction="#onActionCancelReports" prefHeight="25.0" prefWidth="133.0" text="Cancel" />
+      <Button layoutX="676.0" layoutY="782.0" mnemonicParsing="false" onAction="#onActionLogoutReports" prefHeight="25.0" prefWidth="133.0" text="Logout" />
+   </children>
+</AnchorPane>

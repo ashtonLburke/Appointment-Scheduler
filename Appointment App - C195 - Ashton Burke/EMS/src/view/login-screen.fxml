@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreen">
+   <children>
+      <Button fx:id="loginButton" layoutX="251.0" layoutY="211.0" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="25.0" prefWidth="150.0" text="Login" />
+      <Button fx:id="resetButton" layoutX="435.0" layoutY="211.0" mnemonicParsing="false" onAction="#onActionReset" prefHeight="25.0" prefWidth="150.0" text="Reset" />
+      <TextField fx:id="UsernameField" layoutX="252.0" layoutY="76.0" />
+      <TextField fx:id="PasswordField" layoutX="252.0" layoutY="145.0" />
+      <Label fx:id="usernameLabel" layoutX="133.0" layoutY="80.0" text="Username" />
+      <Label fx:id="passwordLabel" layoutX="135.0" layoutY="149.0" text="Password" />
+      <Label layoutX="185.0" layoutY="294.0" />
+      <Label fx:id="timezoneLabel" layoutX="461.0" layoutY="294.0" text="Time Zone" />
+      <Label fx:id="zoneID" layoutX="543.0" layoutY="294.0" text="ZoneID" />
+      <Button fx:id="exitButton" layoutX="662.0" layoutY="290.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+   </children>
+</AnchorPane>

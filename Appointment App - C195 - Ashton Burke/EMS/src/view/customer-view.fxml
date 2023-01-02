@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1631.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomer">
+   <children>
+      <TableView fx:id="CustomersViewTableView" layoutX="185.0" layoutY="139.0" prefHeight="594.0" prefWidth="1261.0">
+        <columns>
+          <TableColumn fx:id="custID" prefWidth="124.0" text="Customer ID" />
+          <TableColumn fx:id="custName" prefWidth="251.0" text="Customer Name" />
+            <TableColumn fx:id="custAddress" prefWidth="170.0" text="Address" />
+            <TableColumn fx:id="custZip" prefWidth="166.0" text="Postal Code" />
+            <TableColumn fx:id="custPhone" prefWidth="236.0" text="Phone Number" />
+            <TableColumn fx:id="custState" prefWidth="313.0" text="State/Province" />
+        </columns>
+      </TableView>
+      <Label layoutX="686.0" layoutY="70.0" text="Appointment Schedule" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="1472.0" layoutY="173.0" mnemonicParsing="false" onAction="#onActionViewAllCust" selected="true" text="View All">
+         <toggleGroup>
+            <ToggleGroup fx:id="main" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="1472.0" layoutY="221.0" mnemonicParsing="false" onAction="#onActionViewCustomersCust" selected="true" text="View Customers" toggleGroup="$main" />
+      <RadioButton disable="true" layoutX="1474.0" layoutY="273.0" mnemonicParsing="false" onAction="#onActionViewMonthCust" text="View by Month" toggleGroup="$main" />
+      <RadioButton disable="true" layoutX="1474.0" layoutY="327.0" mnemonicParsing="false" onAction="#onActionViewWeekCust" text="View by Week" toggleGroup="$main" />
+      <Button layoutX="26.0" layoutY="238.0" mnemonicParsing="false" onAction="#onActionAddCust" prefHeight="25.0" prefWidth="145.0" text="Add Customer" />
+      <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#onActionModifyCust" prefHeight="25.0" prefWidth="145.0" text="Modify Customer" />
+      <Button layoutX="26.0" layoutY="436.0" mnemonicParsing="false" onAction="#onActionDeleteCust" prefHeight="25.0" prefWidth="145.0" text="Delete Customer" />
+      <Button layoutX="29.0" layoutY="530.0" mnemonicParsing="false" onAction="#onActionShowReportsCust" prefHeight="25.0" prefWidth="138.0" text="Reports" />
+      <Button layoutX="1493.0" layoutY="721.0" mnemonicParsing="false" onAction="#onActionLogoutCustomer" prefHeight="25.0" prefWidth="96.0" text="Logout" />
+   </children>
+</AnchorPane>
